@@ -1,0 +1,12 @@
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class jdbcConnection {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+
+		DriverManager.getConnection(null, "root", "Sql@ayu1");
+	}
+
+}

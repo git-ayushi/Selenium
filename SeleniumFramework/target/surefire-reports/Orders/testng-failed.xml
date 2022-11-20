@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Orders]">
+  <test thread-count="5" verbose="0" name="Error Validations Test(failed)">
+    <groups>
+      <run>
+        <include name="ErrorHandling"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="ayushiagarwal.Tests.ErrorValidationsTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="loginValidation"/>
+        </methods>
+      </class> <!-- ayushiagarwal.Tests.ErrorValidationsTest -->
+    </classes>
+  </test> <!-- Error Validations Test(failed) -->
+</suite> <!-- Failed suite [Orders] -->

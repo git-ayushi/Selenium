@@ -1,0 +1,21 @@
+package dateDemo;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class dateDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Date d = new Date();
+		System.out.println(d.toString());
+		SimpleDateFormat sdf = new SimpleDateFormat();
+		System.out.println(sdf.format(d));
+		SimpleDateFormat sd = new SimpleDateFormat("M/dd/yyyy");     //Month of the year is represented by capital M
+		System.out.println(sd.format(d));
+		SimpleDateFormat s = new SimpleDateFormat("M/dd/yyyy hh:mm:ss");
+		System.out.println(s.format(d));
+
+	}
+
+}

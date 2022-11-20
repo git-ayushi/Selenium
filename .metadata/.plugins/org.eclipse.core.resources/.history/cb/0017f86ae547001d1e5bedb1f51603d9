@@ -1,0 +1,25 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SelfIntroduction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//invoke chromedriver.exe file which would act as an interface between selenium and chrome browser to
+		//perform actions on chrome browser
+		
+		System.setProperty("webdriver.chrome.driver", "C:/work/chromedriver.exe");
+		
+		//here we are creating object of WebDriver interface instead of ChromeDriver class to restrict the 
+		//driver object to only use methods defined under WebDriver interface which would be common across all
+		//browsers and code can be used for any browser by just creating an object for that browser
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/");
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		driver.close();
+		driver.quit();
+	}
+
+}

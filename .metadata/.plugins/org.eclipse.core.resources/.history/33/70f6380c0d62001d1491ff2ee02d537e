@@ -1,0 +1,25 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class dataDriven {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		   //Identify testcases column by scanning the entire row
+		FileInputStream fis  = new FileInputStream("C://work//demodata.xlsx");
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);  //XSSFWorkbook only accepts file input stream argument
+		int sheets = workbook.getNumberOfSheets();
+		for(int i = 0; i < sheets; i++) {
+			
+			if(workbook.getSheetName(i).equalsIgnoreCase("testdata")) {
+				XSSFSheet sheet = workbook.getSheetAt(i);
+			}
+			
+		}
+	}
+
+}

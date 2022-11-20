@@ -1,0 +1,30 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.openqa.selenium.WebDriver;
+
+
+public class jdbcConnection {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+
+		String host = "localhost";
+		String port = "3306";
+		Connection con = DriverManager.getConnection("jdbc:mysql://"+ host + ":" + port + "/Qadbt", "root", "Sql@ayu1");
+		Statement s = con.createStatement();
+		ResultSet rs = s.executeQuery("select * from EmployeeInfo where age < 30");
+		
+		while(rs.next()) {
+			WebDriver driver = new ChromeDriver();
+			driver
+		System.out.println(rs.getString("name"));
+		System.out.println(rs.getString("location"));
+		System.out.println(rs.getString("id"));
+		}
+	}
+
+}
